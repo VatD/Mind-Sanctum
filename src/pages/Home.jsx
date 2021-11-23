@@ -31,7 +31,7 @@ const Home = () => {
 			container
 			spacing={6}
 			sx={{
-				p: 3,
+				p: 5,
 				alignItems: 'center',
 			}}
 		>

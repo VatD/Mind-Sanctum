@@ -45,6 +45,8 @@ function App() {
 		<Box
 			sx={{
 				width: '100%',
+				pt: 2,
+				pb: 10,
 				minHeight: '100%',
 				background: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${bgimg}) center no-repeat`,
 				backgroundSize: 'cover',
@@ -52,7 +54,7 @@ function App() {
 				gridTemplateRows: 'max-content 1fr',
 			}}
 		>
-			<Box sx={{ display: 'flex', justifyContent: 'flex-end', p: 2 }}>
+			<Box sx={{ display: 'flex', justifyContent: 'flex-end', p: 2, mb: 5 }}>
 				<Link component={RouterLink} to='/' underline='none'>
 					<AnimatedPaper
 						style={style}
