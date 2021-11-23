@@ -58,7 +58,8 @@ function App() {
 				<Link component={RouterLink} to='/' underline='none'>
 					<AnimatedPaper
 						style={style}
-						onMouseEnter={trigger}
+						onClick={trigger}
+						onPointerEnter={trigger}
 						elevation={6}
 						sx={{
 							p: 2,
