@@ -60,6 +60,7 @@ function App() {
 						style={style}
 						onClick={trigger}
 						onPointerEnter={trigger}
+						onPointerDown={trigger}
 						elevation={6}
 						sx={{
 							p: 2,

@@ -39,6 +39,7 @@ const GlassCard = ({ icon, text, color }) => {
 		<AnimatedPaper
 			style={style}
 			onPointerEnter={trigger}
+			onPointerDown={trigger}
 			onClick={trigger}
 			elevation={6}
 			sx={{
