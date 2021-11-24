@@ -11,7 +11,7 @@ const cardList = [
 	{
 		icon: <CreateIcon sx={{ fontSize: 50 }} />,
 		text: 'write',
-		link: '/Write.jsx',
+		link: '/write',
 	},
 	{
 		icon: <MicIcon sx={{ fontSize: 50 }} />,
