@@ -55,9 +55,6 @@ function App() {
 					width: '100%',
 					pt: 2,
 					pb: 10,
-					minHeight: '100%',
-					background: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${process.env.PUBLIC_URL}/bg.jpg) center no-repeat`,
-					backgroundSize: 'cover',
 					display: 'grid',
 					gridTemplateRows: 'max-content 1fr',
 				}}

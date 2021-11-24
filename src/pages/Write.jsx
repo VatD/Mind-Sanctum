@@ -34,7 +34,7 @@ function Write() {
 			>
 				<TextField
 					id='title'
-					label='Title'
+					label='title'
 					fullWidth
 					variant='standard'
 					margin='dense'

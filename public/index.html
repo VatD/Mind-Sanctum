@@ -35,12 +35,24 @@
 			html,
 			body,
 			#root {
+				margin: 0;
 				height: 100%;
+				position: relative;
+				overflow: auto;
+			}
+			#bg {
+				position: absolute;
+				height: 100%;
+				width: 100%;
+				background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+					url(%PUBLIC_URL%/bg.jpg) center no-repeat;
+				background-size: cover;
 			}
 		</style>
 	</head>
 	<body>
 		<noscript>You need to enable JavaScript to run this app.</noscript>
+		<div id="bg"></div>
 		<div id="root"></div>
 	</body>
 </html>
