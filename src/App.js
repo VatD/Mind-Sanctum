@@ -1,7 +1,6 @@
 import React from 'react';
 import Box from '@mui/material/Box';
 import AcUnitIcon from '@mui/icons-material/AcUnit';
-import bgimg from './static/bg.jpg';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import Home from './pages/Home';
@@ -48,7 +47,7 @@ function App() {
 				pt: 2,
 				pb: 10,
 				minHeight: '100%',
-				background: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${bgimg}) center no-repeat`,
+				background: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${process.env.PUBLIC_URL}/bg.jpg) center no-repeat`,
 				backgroundSize: 'cover',
 				display: 'grid',
 				gridTemplateRows: 'max-content 1fr',
