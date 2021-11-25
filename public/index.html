@@ -32,12 +32,17 @@
 		<link rel="manifest" href="%PUBLIC_URL%/site.webmanifest" />
 		<title>Mind Sanctum</title>
 		<style>
-			html,
+			html {
+				height: 100vh;
+				background-color: #05090e;
+			}
 			body,
 			#root {
-				margin: 0;
-				height: 100%;
 				position: relative;
+				height: 100%;
+			}
+			#root {
+				height: 100%;
 				overflow: auto;
 			}
 			#bg {

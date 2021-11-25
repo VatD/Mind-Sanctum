@@ -17,6 +17,7 @@ import sadEmoji from '../static/sad.gif';
 import mixedEmoji from '../static/mixed.gif';
 import neutralEmoji from '../static/neutral.webp';
 import Typography from '@mui/material/Typography';
+import DeleteIcon from '@mui/icons-material/Delete';
 
 const emotions = {
 	happy: {
@@ -78,6 +79,10 @@ const Home = () => {
 		} catch (e) {}
 	};
 
+	const deleteNote = (id) => {
+		db.journals.delete(id);
+	};
+
 	React.useEffect(() => {
 		const focusid = new URLSearchParams(window.location.search).get('focus');
 		if (focusid !== null) emotionSetter(focusid);
@@ -101,7 +106,7 @@ const Home = () => {
 			headerName: 'Note',
 			renderCell: (params) => (
 				<IconButton
-					aria-label='{view note}'
+					aria-label='view note'
 					onClick={() => {
 						setNote(notes[params.value]);
 						setOpen(true);
@@ -117,6 +122,22 @@ const Home = () => {
 		{ field: 'body', headerName: 'Body', hide: true, flex: 4 },
 		{ field: 'score', headerName: 'Emotion', type: 'number', flex: 1 },
 		{ field: 'magnitude', headerName: 'Strength', type: 'number', flex: 1 },
+		{
+			field: 'id',
+			headerName: 'Delete',
+			renderCell: (params) => (
+				<IconButton
+					aria-label='delete note'
+					onClick={() => {
+						deleteNote(params.value);
+					}}
+					color='error'
+				>
+					<DeleteIcon />
+				</IconButton>
+			),
+			flex: 1,
+		},
 	];
 
 	return (

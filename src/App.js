@@ -54,6 +54,7 @@ function App() {
 			<Box
 				sx={{
 					width: '100%',
+					zIndex: 1,
 					pt: 2,
 					pb: 10,
 					display: 'grid',
