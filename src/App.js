@@ -61,7 +61,7 @@ function App() {
 					gridTemplateRows: 'max-content 1fr',
 				}}
 			>
-				<Box sx={{ display: 'flex', justifyContent: 'flex-end', p: 2, mb: 5 }}>
+				<Box sx={{ display: 'flex', justifyContent: 'center', p: 2, mb: 5 }}>
 					<Link component={RouterLink} to='/' underline='none'>
 						<AnimatedPaper
 							style={style}
