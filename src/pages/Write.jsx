@@ -10,6 +10,8 @@ import processEntry from '../utils/processEntry';
 import { useNavigate } from 'react-router-dom';
 import Snackbar from '@mui/material/Snackbar';
 import MuiAlert from '@mui/material/Alert';
+import ClearIcon from '@mui/icons-material/Clear';
+import Stack from '@mui/material/Stack';
 
 const Alert = React.forwardRef(function Alert(props, ref) {
 	return <MuiAlert elevation={6} ref={ref} variant='filled' {...props} />;
@@ -28,6 +30,13 @@ function Write() {
 			return;
 		}
 		setError(false);
+	};
+
+	const clearContents = () => {
+		localStorage.removeItem('title');
+		localStorage.removeItem('body');
+		setTitle('');
+		setBody('');
 	};
 
 	useEffect(() => {
@@ -58,7 +67,7 @@ function Write() {
 		if (id) {
 			localStorage.removeItem('title');
 			localStorage.removeItem('body');
-			navigate('/notes?redirect=true');
+			navigate('/notes?focus=' + id);
 		} else if (error) {
 			localStorage.setItem('title', title);
 			localStorage.setItem('body', body);
@@ -108,21 +117,23 @@ function Write() {
 					value={body}
 					onChange={(e) => setBody(e.target.value)}
 				/>
-				<Fab
-					sx={{
-						position: 'absolute',
-						bottom: 25,
-						right: 25,
-					}}
-					type='submit'
-					aria-label={'save'}
-					size='large'
-					color='secondary'
-				>
-					<Tooltip title='save' placement='top'>
-						<SaveIcon />
-					</Tooltip>
-				</Fab>
+				<Stack direction='row' justifyContent='flex-end' spacing={3}>
+					<Fab
+						aria-label={'clear'}
+						size='large'
+						color='warning'
+						onClick={clearContents}
+					>
+						<Tooltip title='clear' placement='top-end'>
+							<ClearIcon />
+						</Tooltip>
+					</Fab>
+					<Fab type='submit' aria-label={'save'} size='large' color='secondary'>
+						<Tooltip title='save' placement='top-end'>
+							<SaveIcon />
+						</Tooltip>
+					</Fab>
+				</Stack>
 			</Box>
 			<Backdrop
 				sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1 }}

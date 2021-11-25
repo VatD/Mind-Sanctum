@@ -2,7 +2,7 @@ import { db } from '../db/db';
 
 export default function addEntry(score, magnitude, title, body) {
 	return db.journals.add({
-		date_time: new Date().toString(),
+		date: new Date().toDateString(),
 		score,
 		magnitude,
 		title,

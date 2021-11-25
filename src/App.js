@@ -5,6 +5,7 @@ import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import Home from './pages/Home';
 import Write from './pages/Write';
+import Notes from './pages/Notes';
 import { Routes, Route, Link as RouterLink } from 'react-router-dom';
 import Link from '@mui/material/Link';
 import { useSpring, animated } from 'react-spring';
@@ -84,7 +85,7 @@ function App() {
 					</Link>
 				</Box>
 				<Routes>
-					<Route path='mood/*' element={<Home />} />
+					<Route path='notes/*' element={<Notes />} />
 					<Route path='speak/*' element={<Home />} />
 					<Route path='write/*' element={<Write />} />
 					<Route path='*' element={<Home />} />
