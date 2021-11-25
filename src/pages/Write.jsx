@@ -6,6 +6,7 @@ import BookIcon from '@mui/icons-material/Book';
 import Tooltip from '@mui/material/Tooltip';
 import Backdrop from '@mui/material/Backdrop';
 import CircularProgress from '@mui/material/CircularProgress';
+import Call from "../utils/apiCall";
 
 function Write() {
 	const [title, setTitle] = useState('');
@@ -15,6 +16,7 @@ function Write() {
 	const onSubmit = (e) => {
 		e.preventDefault();
 		setOpen(true);
+		Call(title ,body);
 		console.log(title.trim(), body.trim());
 	};
 
