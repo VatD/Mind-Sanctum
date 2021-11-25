@@ -30,7 +30,7 @@ const emotions = {
 		emoji: sadEmoji,
 		desc: 'you are sad',
 	},
-	confused: {
+	mixed: {
 		text: 'mixed',
 		emoji: mixedEmoji,
 		desc: 'you have mixed feelings',
